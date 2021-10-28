@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from './Components/Home/Home/Home';
 import Header from './Components/Shared/Header/Header';
 import Footer from './Components/Shared/Footer/Footer';
@@ -8,6 +8,7 @@ import About from './Components/About/About';
 import NotFound from './Components/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import Login from './Components/Login/Login/Login';
+import PrivetRoute from './Components/Login/PrivetRoute/PrivetRoute';
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
           <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/About">
+            <PrivetRoute path="/About">
               <About></About>
-            </Route>
+            </PrivetRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
