@@ -37,7 +37,7 @@ const Find = () => {
   
 {/* link to tripe page */}
 
-<Link to={`/About`}>
+<Link to={`/Tours`}>
                 <button className="btn btn-primary">Find Now</button>
             </Link>
 </Form>

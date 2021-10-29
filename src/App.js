@@ -9,6 +9,7 @@ import NotFound from './Components/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import Login from './Components/Login/Login/Login';
 import PrivetRoute from './Components/Login/PrivetRoute/PrivetRoute';
+import Tours from './Components/Tours/Tours';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <PrivetRoute path="/About">
               <About></About>
+            </PrivetRoute>
+            <PrivetRoute path="/Tours">
+              <Tours></Tours>
             </PrivetRoute>
             <Route path="/login">
               <Login></Login>
