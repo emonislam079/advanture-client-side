@@ -1,10 +1,9 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-const Tour = (props) => {
+const SliceTour = (props) => {
     const {name, details, cost, img}= props.tour
-    
+
     return (
         <div className="align-content-center">
            <Col>
@@ -26,4 +25,4 @@ const Tour = (props) => {
     );
 };
 
-export default Tour;
+export default SliceTour;
