@@ -13,7 +13,7 @@ const Booking = () => {
     const{user } = useAuth();
     const { tourId } = useParams();
     const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+    const onSubmit = data => console.log(data);
   
     
 

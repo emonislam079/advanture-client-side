@@ -11,6 +11,7 @@ import Login from './Components/Login/Login/Login';
 import PrivetRoute from './Components/Login/PrivetRoute/PrivetRoute';
 import Tours from './Components/Tours/Tours';
 import Booking from './Components/Booking/Booking';
+import MyBooking from './Components/MyBooking/MyBooking';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <PrivetRoute path="/Tours">
               <Tours></Tours>
+            </PrivetRoute>
+            <PrivetRoute path="/books">
+              <MyBooking></MyBooking>
             </PrivetRoute>
             <PrivetRoute path="/Booking/:tourId">
               <Booking></Booking>
