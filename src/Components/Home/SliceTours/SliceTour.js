@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SliceTour = (props) => {
     const {name, details, cost, img}= props.tour
@@ -14,9 +15,9 @@ const SliceTour = (props) => {
           <Card.Text className="my-3">
             {details}
             <h3 className="my-3">Cost:{cost}</h3>
-            {/* <Link to={`/Appointment`}>
-                <button className="btn btn-primary">Book {name}</button>
-            </Link> */}
+            {<Link to={`/Booking`}>
+                <button className="btn btn-primary">Book Now</button>
+            </Link>}
           </Card.Text>
         </Card.Body>
       </Card>

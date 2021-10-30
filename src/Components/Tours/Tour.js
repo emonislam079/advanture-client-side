@@ -15,9 +15,9 @@ const Tour = (props) => {
           <Card.Text className="my-3">
             {details}
             <h3 className="my-3">Cost:{cost}</h3>
-            {/* <Link to={`/Appointment`}>
-                <button className="btn btn-primary">Book {name}</button>
-            </Link> */}
+            { <Link to={`/Booking`}>
+                <button className="btn btn-primary">Book Now</button>
+            </Link>}
           </Card.Text>
         </Card.Body>
       </Card>
