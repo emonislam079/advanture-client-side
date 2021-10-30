@@ -7,7 +7,7 @@ const SliceTours = () => {
     const [Tours , setTours]= useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/Tours')
+        fetch('https://shrouded-depths-77971.herokuapp.com/Tours')
         .then(res => res.json())
         .then(data => setTours(data))
 

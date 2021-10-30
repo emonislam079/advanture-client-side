@@ -18,7 +18,7 @@ const Booking = () => {
     
 
     useEffect(() => {
-        const url = `http://localhost:5000/Tours/${tourId}`;
+        const url = `https://shrouded-depths-77971.herokuapp.com/Tours/${tourId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTour(data));
