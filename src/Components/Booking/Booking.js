@@ -51,9 +51,13 @@ const Booking = () => {
 
                 <input defaultValue={user.email} {...register("email", { required: true })} />
                 {errors.email && <span className="error">This field is required</span>}
+
+                <input defaultValue={tour.name} {...register("where")} />
+
+                <input defaultValue={tour.cost} {...register("cost")} />
                 
                 <input placeholder="Address" defaultValue="" {...register("address")} />
-                <input placeholder="City" defaultValue="" {...register("city")} />
+                
                 <input placeholder="phone number" defaultValue="" {...register("phone")} />
 
                 <input type="submit" />

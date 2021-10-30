@@ -12,3 +12,12 @@
 .error {
   color: red;
 }
+
+@media only screen and (max-width: 600px) {
+  .Booking-form {
+    margin: 30px 0px;
+  }
+  .Booking-form input {
+    width: 250px;
+  }
+}
