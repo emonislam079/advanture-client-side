@@ -3,7 +3,7 @@ import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Tour = (props) => {
-    const {name, details, cost, img}= props.tour
+    const {name, details, cost, img, _id}= props.tour
     
     return (
         <div className="align-content-center">
@@ -15,7 +15,7 @@ const Tour = (props) => {
           <Card.Text className="my-3">
             {details}
             <h3 className="my-3">Cost:{cost}</h3>
-            { <Link to={`/Booking`}>
+            { <Link to={`/Booking/${_id}`}>
                 <button className="btn btn-primary">Book Now</button>
             </Link>}
           </Card.Text>

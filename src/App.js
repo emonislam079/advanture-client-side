@@ -10,6 +10,7 @@ import AuthProvider from './Context/AuthProvider';
 import Login from './Components/Login/Login/Login';
 import PrivetRoute from './Components/Login/PrivetRoute/PrivetRoute';
 import Tours from './Components/Tours/Tours';
+import Booking from './Components/Booking/Booking';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <PrivetRoute path="/Tours">
               <Tours></Tours>
+            </PrivetRoute>
+            <PrivetRoute path="/Booking/:tourId">
+              <Booking></Booking>
             </PrivetRoute>
             <Route path="/login">
               <Login></Login>
