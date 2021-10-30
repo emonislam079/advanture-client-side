@@ -8,7 +8,7 @@ const Tours = () => {
     const [tours , setTours]= useState([]);
 
     useEffect(() => {
-        fetch('./Tours.json')
+        fetch('http://localhost:5000/Tours')
             .then(res => res.json())
             .then(data => setTours(data))
     }, []);
