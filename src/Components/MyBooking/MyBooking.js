@@ -5,7 +5,7 @@ import Booked from './Booked';
 const MyBooking = () => {
     const [booked, setBooked]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/books')
+        fetch('https://shrouded-depths-77971.herokuapp.com/books')
         .then(res => res.json())
         .then(data => setBooked(data))
     }, []);

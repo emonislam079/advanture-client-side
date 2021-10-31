@@ -12,6 +12,7 @@ const Tours = () => {
             .then(res => res.json())
             .then(data => setTours(data))
     }, []);
+    
 
 
 

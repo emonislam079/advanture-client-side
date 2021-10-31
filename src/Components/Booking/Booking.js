@@ -14,7 +14,7 @@ const Booking = () => {
     const { tourId } = useParams();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-      fetch('http://localhost:5000/booking', {
+      fetch('https://shrouded-depths-77971.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
