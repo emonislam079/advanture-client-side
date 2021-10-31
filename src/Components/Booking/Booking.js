@@ -8,6 +8,7 @@ import './Booking.css'
 
 
 
+
 const Booking = () => {
     const [tour, setTour] = useState({});
     const{user } = useAuth();
@@ -68,15 +69,17 @@ const Booking = () => {
                 <input defaultValue={user.email} {...register("email", { required: true })} />
                 {errors.email && <span className="error">This field is required</span>}
 
-                <input defaultValue={tour.name} placeholder="Where You Want to go" {...register("where",{ required: true } )} />
+                <input  placeholder="Where You Want to go" {...register("where",{ required: true } )} />
 
-                <input placeholder="cost" defaultValue={tour.cost} {...register("cost", { required: true })} />
+                <input placeholder="cost" {...register("cost", { required: true })} />
                 
                 <input placeholder="Address" defaultValue="" {...register("address", { required: true })} />
                 
                 <input placeholder="phone number" defaultValue="" {...register("phone", { required: true }) } />
-
+                
                 <input type="submit" />
+      
+                
             </form>
             </div>
     </div>
