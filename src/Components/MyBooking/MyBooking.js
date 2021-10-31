@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Row } from 'react-bootstrap';
+import Booked from './Booked';
 
 const MyBooking = () => {
+    const [booked, setBooked]= useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:5000/books')
+        .then(res => res.json())
+        .then(data => setBooked(data))
+    }, []);
+
     return (
-        <div className="mt-5">
-            <h1>This is My booking</h1>
+        <div className="container mt-5 pt-3">
+            <Row xs={1} md={3} className="g-4 container">
+            {
+                booked.map(book=><Booked
+                key={book._id}
+                book={book}
+                ></Booked>)
+            }
+            </Row>
         </div>
     );
 };
