@@ -38,7 +38,7 @@ const MyBooking = () => {
                 key={book._id}
                 book={book}
                 >
-                    <Card style={{ width: '300px' }}>
+                    <Card style={{ width: '250px' }}>
             <Card.Body>
                  <Card.Title>{book.where}</Card.Title>
                  <Card.Subtitle className="mb-2 text-muted">Name: {book.name}</Card.Subtitle>
