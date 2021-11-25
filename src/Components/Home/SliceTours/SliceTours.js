@@ -4,12 +4,12 @@ import SliceTour from './SliceTour';
 
 
 const SliceTours = () => {
-    const [Tours , setTours]= useState([]);
+    const [Tours, setTours] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('https://shrouded-depths-77971.herokuapp.com/Tours')
-        .then(res => res.json())
-        .then(data => setTours(data))
+            .then(res => res.json())
+            .then(data => setTours(data))
 
     }, []);
 
@@ -18,13 +18,14 @@ const SliceTours = () => {
         <div className="container mt-5 pt-3">
             <h1 className="fs-1 text-primary mb-5">Most Popular Tours</h1>
             <Row xs={1} md={3} className="g-4 container">
-            {
-                Tours.slice(0,6).map(tour => <SliceTour
-                key = {tour.id}
-                tour = {tour}
-                ></SliceTour>)
-            }
-</Row>
+                {
+                    Tours.slice(0, 6).map(tour => <SliceTour
+                        key={tour.id}
+                        tour={tour}
+                    ></SliceTour>)
+                }
+            </Row>
+
         </div>
     );
 };
